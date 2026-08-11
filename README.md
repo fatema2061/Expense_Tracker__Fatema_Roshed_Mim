@@ -52,53 +52,53 @@ Before installing the project, make sure the following are installed on your sys
 # Installation Steps
 
 ## 1. Clone the Repository
-Clone the project from GitHub:
-* git clone https://github.com/fatema2061/Expense_Tracker_Fatema_Roshed_Mim.git
-Navigate to the project directory:
-* cd Expense_Tracker_Fatema_Roshed_Mim
+* Clone the project from GitHub:
+ git clone https://github.com/fatema2061/Expense_Tracker_Fatema_Roshed_Mim.git
+* Navigate to the project directory:
+cd Expense_Tracker_Fatema_Roshed_Mim
 ## 2. Install Backend Dependencies
-Navigate to the backend folder:
+* Navigate to the backend folder:
 cd backend
-Install the required packages:
+* Install the required packages:
 npm install
 ## 3. Create the MySQL Database
 Create a MySQL database named:
-expense_tracker
+**expense_tracker**.
 You can create the database using phpMyAdmin, MySQL Workbench, or the MySQL command line.
 ## 4. Configure Environment Variables
 Inside the backend directory, create a .env file:
 DATABASE_URL="mysql://USERNAME:PASSWORD@localhost:3306/expense_tracker"
 JWT_SECRET="your_secure_jwt_secret"
-PORT=5000
+PORT=5000.
 Replace 'USERNAME' and 'PASSWORD' with your local MySQL credentials.
 ## 5. Run Prisma Migration
-Run the Prisma migration:
+* Run the Prisma migration:
 npx prisma migrate dev
-Generate the Prisma Client:
+* Generate the Prisma Client:
 npx prisma generate
 ## 6. Install Frontend Dependencies
-Open a new terminal and go to the frontend directory:
+* Open a new terminal and go to the frontend directory:
 cd frontend
-Install the frontend dependencies:
+* Install the frontend dependencies:
 npm install
-The project is now ready to run.
+* The project is now ready to run.
 
 -------------------------------------------------------------------------------------------------- 
 # How to Run
 The frontend and backend should be run separately.
 ## Run the Backend
-Open a terminal:
-cd backend
-npm run dev
-The backend server will normally run at:
+* Open a terminal:
+ **cd backend**,then
+ **npm run dev**
+* The backend server will normally run at:
 http://localhost:5000
 ## Run the Frontend
-Open another terminal:
-cd frontend
-npm run dev
-The frontend will normally run at:
+* Open another terminal:
+**cd frontend**,then
+**npm run dev**
+* The frontend will normally run at:
 http://localhost:5173
-Open the frontend URL in your browser:
+* Open the frontend URL in your browser:
 http://localhost:5173
 
 ---------------------------------------------------------------------------------------------------
