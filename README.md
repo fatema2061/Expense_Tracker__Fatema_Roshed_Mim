@@ -128,6 +128,11 @@ The database consists of three main entities:
 ### Entity Relationship
 
 User
+├── Category
+│   └── Transaction
+└── Transaction
+
+User
  │
  ├───────────────┐
  │               │
