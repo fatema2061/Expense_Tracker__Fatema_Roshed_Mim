@@ -126,24 +126,15 @@ The database consists of three main entities:
 * **Transaction**
 
 ### Entity Relationship
-| ------------ | --------------------- |
-|  User        | Transaction, Category |
-|  Transaction | Category              |
-User
-├── Category
-│   └── Transaction
-└── Transaction
+### Entity Relationship
 
-User
- │
- ├───────────────┐
- │               │
- ▼               ▼
-Category      Transaction
-                 │
-                 │
-                 ▼
-              Category
+| Entity | Relationship |
+|---|---|
+| User | Has many Categories |
+| User | Has many Transactions |
+| Category | Has many Transactions |
+| Transaction | Belongs to one User |
+| Transaction | Belongs to one Category |
 
 ### User
 
@@ -181,13 +172,7 @@ Category      Transaction
 | `createdAt`       | DateTime | Transaction creation date        |
 | `updatedAt`       | DateTime | Last update date                 |
 
-### Relationships
 
-* One **User** can have many **Categories**.
-* One **User** can have many **Transactions**.
-* One **Category** can be associated with many **Transactions**.
-* Each **Transaction** belongs to one **User** and one **Category**.
-* Categories and transactions are isolated per authenticated user.
 
 
 
