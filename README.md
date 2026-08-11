@@ -126,7 +126,9 @@ The database consists of three main entities:
 * **Transaction**
 
 ### Entity Relationship
-
+| ------------ | --------------------- |
+|  User        | Transaction, Category |
+|  Transaction | Category              |
 User
 ├── Category
 │   └── Transaction
