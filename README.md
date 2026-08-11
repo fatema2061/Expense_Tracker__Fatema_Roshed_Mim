@@ -3,7 +3,7 @@ A full-stack Expense Tracker web application built using **React, Node.js, Expre
 The application allows users to securely manage their income and expenses. 
 Authenticated users can create and manage transactions and categories, filter transactions, and view their financial summary through a dashboard.
 
-**Project Overview**
+# Project Overview
 ## Main Features
   * User registration and login
   * JWT-based authentication
@@ -41,7 +41,7 @@ Authenticated users can create and manage transactions and categories, filter tr
     * MySQL
     * Prisma ORM
 ---------------------------------------------------------------------------------------------
-**Prerequisites**
+# Prerequisites
 Before installing the project, make sure the following are installed on your system:
 * Node.js (LTS recommended)
 * npm (comes with Node.js)
@@ -49,7 +49,7 @@ Before installing the project, make sure the following are installed on your sys
 * Git
 * phpMyAdmin or MySQL Workbench (optional, for database management)
 ----------------------------------------------------------------------------------------------
-**Installation Steps**
+# Installation Steps
 
 ## 1. Clone the Repository
 Clone the project from GitHub:
@@ -84,7 +84,7 @@ npm install
 The project is now ready to run.
 
 -------------------------------------------------------------------------------------------------- 
-**How to Run**
+# How to Run
 The frontend and backend should be run separately.
 ## Run the Backend
 Open a terminal:
@@ -92,7 +92,7 @@ cd backend
 npm run dev
 The backend server will normally run at:
 http://localhost:5000
-### Run the Frontend
+## Run the Frontend
 Open another terminal:
 cd frontend
 npm run dev
@@ -102,7 +102,7 @@ Open the frontend URL in your browser:
 http://localhost:5173
 
 ---------------------------------------------------------------------------------------------------
-**Default Environment Variables**
+# Default Environment Variables
 The backend uses the following environment variables:
 
 | Variable     | Default / Example                                        | Description                            |
@@ -115,7 +115,7 @@ The backend uses the following environment variables:
 
 ------------------------------------------------------------------------------------------------------
 
-## Database Schema
+# Database Schema
 
 The application uses **MySQL** as the relational database and **Prisma ORM** for database management.
 
@@ -126,7 +126,7 @@ The database consists of three main entities:
 * **Transaction**
 
 ### Entity Relationship
-### Entity Relationship
+
 
 | Entity | Relationship |
 |---|---|
@@ -172,7 +172,13 @@ The database consists of three main entities:
 | `createdAt`       | DateTime | Transaction creation date        |
 | `updatedAt`       | DateTime | Last update date                 |
 
+### Relationships
 
+* One **User** can have many **Categories**.
+* One **User** can have many **Transactions**.
+* One **Category** can be associated with many **Transactions**.
+* Each **Transaction** belongs to one **User** and one **Category**.
+* Categories and transactions are isolated per authenticated user.
 
 
 
