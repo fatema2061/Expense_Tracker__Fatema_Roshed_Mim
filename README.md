@@ -53,9 +53,9 @@ Before installing the project, make sure the following are installed on your sys
 
 ## 1. Clone the Repository
 Clone the project from GitHub:
-git clone https://github.com/fatema2061/Expense_Tracker_Fatema_Roshed_Mim.git
+* git clone https://github.com/fatema2061/Expense_Tracker_Fatema_Roshed_Mim.git
 Navigate to the project directory:
-cd Expense_Tracker_Fatema_Roshed_Mim
+* cd Expense_Tracker_Fatema_Roshed_Mim
 ## 2. Install Backend Dependencies
 Navigate to the backend folder:
 cd backend
