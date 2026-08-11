@@ -62,15 +62,15 @@ cd backend
 * Install the required packages:
 npm install
 ## 3. Create the MySQL Database
-Create a MySQL database named:
+* Create a MySQL database named:
 **expense_tracker**.
-You can create the database using phpMyAdmin, MySQL Workbench, or the MySQL command line.
+* You can create the database using phpMyAdmin, MySQL Workbench, or the MySQL command line.
 ## 4. Configure Environment Variables
 Inside the backend directory, create a .env file:
-DATABASE_URL="mysql://USERNAME:PASSWORD@localhost:3306/expense_tracker"
-JWT_SECRET="your_secure_jwt_secret"
-PORT=5000.
-Replace 'USERNAME' and 'PASSWORD' with your local MySQL credentials.
+* DATABASE_URL="mysql://USERNAME:PASSWORD@localhost:3306/* expense_tracker"
+* JWT_SECRET="your_secure_jwt_secret"
+* PORT=5000.
+* Replace 'USERNAME' and 'PASSWORD' with your local MySQL credentials.
 ## 5. Run Prisma Migration
 * Run the Prisma migration:
 npx prisma migrate dev
