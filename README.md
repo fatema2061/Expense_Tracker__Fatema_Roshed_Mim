@@ -113,6 +113,77 @@ The backend uses the following environment variables:
 
 **Note:** The values shown above are examples/defaults. Configure them according to your local environment.
 
+------------------------------------------------------------------------------------------------------
+
+## Database Schema
+
+The application uses **MySQL** as the relational database and **Prisma ORM** for database management.
+
+The database consists of three main entities:
+
+* **User**
+* **Category**
+* **Transaction**
+
+### Entity Relationship
+
+User
+ │
+ ├───────────────┐
+ │               │
+ ▼               ▼
+Category      Transaction
+                 │
+                 │
+                 ▼
+              Category
+
+### User
+
+| Field       | Type     | Description           |
+| ----------- | -------- | --------------------- |
+| `id`        | Int      | Primary key           |
+| `fullName`  | String   | User's full name      |
+| `email`     | String   | Unique user email     |
+| `password`  | String   | Hashed password       |
+| `createdAt` | DateTime | Account creation date |
+| `updatedAt` | DateTime | Last update date      |
+
+### Category
+
+| Field       | Type     | Description                  |
+| ----------- | -------- | ---------------------------- |
+| `id`        | Int      | Primary key                  |
+| `name`      | String   | Category name                |
+| `type`      | Enum     | `INCOME` or `EXPENSE`        |
+| `userId`    | Int      | Foreign key referencing User |
+| `createdAt` | DateTime | Category creation date       |
+| `updatedAt` | DateTime | Last update date             |
+
+### Transaction
+
+| Field             | Type     | Description                      |
+| ----------------- | -------- | -------------------------------- |
+| `id`              | Int      | Primary key                      |
+| `title`           | String   | Transaction title                |
+| `amount`          | Decimal  | Transaction amount               |
+| `type`            | Enum     | `INCOME` or `EXPENSE`            |
+| `categoryId`      | Int      | Foreign key referencing Category |
+| `userId`          | Int      | Foreign key referencing User     |
+| `transactionDate` | DateTime | Date of the transaction          |
+| `createdAt`       | DateTime | Transaction creation date        |
+| `updatedAt`       | DateTime | Last update date                 |
+
+### Relationships
+
+* One **User** can have many **Categories**.
+* One **User** can have many **Transactions**.
+* One **Category** can be associated with many **Transactions**.
+* Each **Transaction** belongs to one **User** and one **Category**.
+* Categories and transactions are isolated per authenticated user.
+
+
+
 Author
 Fatema Roshed Mim
 B.Sc. in Information and Communication Technology (ICT)
